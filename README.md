@@ -14,8 +14,7 @@ This work originated from my course project on "Bayesian Learning". I have since
 @inproceedings{RKFAGST,
   title={Robust Kalman Filter for Additive Gaussian-Student's t Distribution},
   author={Jin, Gurui and Hao, Pengcheng and Liu, Zhenyu and Kuruo{\u{g}}lu, Ercan Engin and Zhang, Xiao-Ping},
-  booktitle={ICASSP 2026-2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-  year={2026},
-  organization={IEEE}
+  booktitle={2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
+  year={2026}
 }
 ```
