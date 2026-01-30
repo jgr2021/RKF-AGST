@@ -57,7 +57,7 @@ This method avoids distributional simplification and directly addresses the comp
 **Note**: Symbol definitions
 - $\mathcal{N}(\mu, \sigma^2)$: Gaussian/Normal distribution with mean $\mu$ and variance $\sigma^2$
 - $\mathcal{St}(\mu, \nu, \sigma^2)$: Student's t-distribution with location parameter $\mu$, degrees of freedom $\nu$, and scale parameter $\sigma$
-- $h(x)$: Nonlinear mapping function from state to observation
+- $h(x)$: Mapping function from state to observation
 
 
 ## Acknowledgement
