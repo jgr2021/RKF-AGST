@@ -12,7 +12,7 @@ In contrast, the proposed method addresses more complex **mixed-noise scenarios*
 ### Problem Definition
 
 The observation model is expressed as:
-
+z = h(x) + n₁ + n₂
 where the noise components are:
 
 1. **Gaussian noise**: `n₁ ∼ 𝒩(0, σ²)`
