@@ -1,9 +1,7 @@
 # RKF-AGST
 This repository is for the code of the ICASSP 2026 paper: "Robust Kalman Filter for Additive Gaussian-Student's t Distribution".
 
-# Key Innovation
-## Background
-
+## Key Innovation
 Traditional Kalman filtering has notable limitations when dealing with system and measurement noise:
 
 - **Kalman Filter**: Limited to Gaussian noise assumptions
@@ -11,7 +9,7 @@ Traditional Kalman filtering has notable limitations when dealing with system an
 
 In contrast, the proposed method addresses more complex **mixed-noise scenarios**, specifically combinations of Gaussian and non-Gaussian noise (such as GSM-typical non-Gaussian noise).
 
-## Problem Definition
+### Problem Definition
 
 The observation model is expressed as:
 
@@ -20,17 +18,17 @@ where the noise components are:
 1. **Gaussian noise**: `n₁ ∼ 𝒩(0, σ²)`
 2. **Student's t-distribution noise**: `n₂ ∼ 𝒮𝓉(0, ν, σ²)`
 
-## Noise Handling Strategies Across Filtering Methods
+### Noise Handling Strategies Across Filtering Methods
 
-### 1. Kalman Filter Approach
+#### 1. Kalman Filter Approach
 Assumes mixed noise can be approximated as a single Gaussian distribution:
 This method simplifies the mixed noise to Gaussian by re-estimating the variance parameter.
 
-### 2. Other Robust Filter Approaches
+#### 2. Other Robust Filter Approaches
 Assume mixed noise can be approximated as a single Student's t-distribution:
 This approach simplifies the mixed noise to a t-distribution by adjusting the degrees of freedom and scale parameters.
 
-### 3. Proposed Method
+#### 3. Proposed Method
 **Preserves the original forms of both noise components**, directly studying the true distribution of the mixed noise:
 This method avoids distributional simplification and directly addresses the complex characteristics of mixed noise, theoretically providing better adaptation to complex noise environments in practical systems.
 
