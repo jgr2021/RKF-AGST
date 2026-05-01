@@ -67,10 +67,14 @@ This work originated from my course project on "Bayesian Learning". I have since
 
 ## Citation
 ```
-@inproceedings{RKFAGST,
-  title={Robust Kalman Filter for Additive Gaussian-Student's t Distribution},
-  author={Jin, Gurui and Hao, Pengcheng and Liu, Zhenyu and Zhang, Xiao-Ping and Kuruo{\u{g}}lu, Ercan Engin},
-  booktitle={2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)},
-  year={2026}
+@INPROCEEDINGS{11463196,
+  author={Jin, Gurui and Hao, Pengcheng and Liu, Zhenyu and Zhang, Xiao-Ping and Kuruoğlu, Ercan E.},
+  booktitle={ICASSP 2026 - 2026 IEEE International Conference on Acoustics, Speech and Signal Processing (ICASSP)}, 
+  title={Robust Kalman Filter for Additive Gaussian-Student’s T Distribution}, 
+  year={2026},
+  volume={},
+  number={},
+  pages={216-220}
 }
+
 ```
