@@ -1,9 +1,11 @@
-n_Q=1;%n_R=2;n_dof=2;
+n_Q=1;n_R=4;n_dof=2;
+%n_Q=9;n_R=4;n_dof=1;
+Qob=1;
 n_N=100000;
-wp=0.9;
-U=100;
-Noise_samples=GMrnd(n_Q,0.9,100,n_N);
-
+% wp=0.9;
+% U=100;
+%Noise_samples=GMrnd(n_Q,0.9,100,n_N);
+Noise_samples=GSTrnd(Qob,n_R,n_dof,n_N)';
 R_Gaussian=var(Noise_samples);
 lb= [0,0];
 ub= [inf, inf];
@@ -31,7 +33,7 @@ F=[1,0,dt,0;
 H=[1,0,0,0;
    0,1,0,0];
 %H=eye(4);
-[z,pos]=Traj_Poly(x0,F,H,Q,Qob,wp,U,N);
+[z,pos]=Traj_Poly(x0,F,H,Q,Qob,n_R,n_dof,N);
 
 %%%%%%%
 
@@ -56,7 +58,7 @@ time_RKFGaussian=0;
 time_RKFST=0;
 time_RKFAdditive=0;
 parfor i=1:sim_num
-    [z,pos]=Traj_Poly(x0,F,H,Q,Qob,wp,U,N);
+    [z,pos]=Traj_Poly(x0,F,H,Q,Qob,n_R,n_dof,N);
 
     [loss_t,time_t]=test_demo(z,pos,R_Gaussian);
     time_KF=time_KF+time_t;
@@ -75,7 +77,7 @@ parfor i=1:sim_num
     time_RKFST=time_RKFST+time_t;
     loss_RKFST=loss_RKFST+loss_t;
 
-    [loss_t,time_t]=test_demoRKFAGSMG(z,pos,1,3,2);
+    [loss_t,time_t]=test_demoRKFAGSMG(z,pos,n_Q,n_R,n_dof);
     time_RKFAdditive=time_RKFAdditive+time_t;
     loss_RKFAdditive=loss_RKFAdditive+loss_t;
 
